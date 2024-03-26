@@ -1,0 +1,45 @@
+# IMPORT THE ARRAY MODULE
+import array as temps
+
+# CREATES AND NAMES THE ARRAY
+days = temps.array("d", [])  # array elements are the same data type
+
+# While Loop that stores user inputs
+index = 0
+while index <= 2:
+    days_temp = float(input("Enter the temperature for 3 days:\n"))
+    days.append(days_temp)
+    print("Original temps", days_temp)
+    index += 1
+print(days)
+
+
+# Array to manipulate the data from the other array
+new_temps = temps.array("d", [])
+
+for celsiusTemps in days:
+    convertF = (celsiusTemps * 1.8) + 32
+    new_temps.append(convertF)
+    print("New Temps: ", convertF)
+print(new_temps)
+
+# Make inferences based on data in the new array
+hot = 0
+warm = 0
+cool = 0
+
+for temp in new_temps:
+    if temp > 90:
+        hot += 1
+    elif temp <= 89:
+        warm += 1
+    elif temp <= 79:
+        cool += 1
+print("The number of hot days is ", hot)
+print("The number of warm days is ", warm)
+print("The number of cool days is, ", cool)
+
+
+
+
+

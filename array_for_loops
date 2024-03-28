@@ -1,0 +1,33 @@
+import array as arr
+
+
+# Formulate body mass index for individuals in a list
+
+listPpl = ["Mary", "Jon", "Sam", "Tim"]
+height = []
+weight =[]
+bmis = arr.array('d', [])
+
+for names in listPpl:
+    inches = int(input("{}, what is your height in inches? ".format(names)))
+    height.append(inches)
+    print("Heights: ", height)
+    pounds = int(input("{}, what is your weight in pounds?".format(names)))
+    weight.append(pounds)
+    print("Weights: ", weight)
+
+
+def getBMI(height, weight):
+    return weight * (703 / (height ** 2))
+
+def statusBMI(bmi):
+    if bmi < 18.5:
+        return "underweight"
+    elif 18.5 <= bmi <= 25:
+        return "normal weight"
+    elif bmi > 25:
+        return "overweight"
+
+underWeight = 0
+normalWeight = 0
+overWeight = 0

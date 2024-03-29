@@ -5,13 +5,16 @@ import array as arr
 
 listPpl = ["Mary", "Jon", "Sam", "Tim"]
 height = []
-weight =[]
+weight = []
 bmis = arr.array('d', [])
 
+# For loop to append data to height and weight lists
 for names in listPpl:
+
     inches = int(input("{}, what is your height in inches? ".format(names)))
     height.append(inches)
     print("Heights: ", height)
+
     pounds = int(input("{}, what is your weight in pounds?".format(names)))
     weight.append(pounds)
     print("Weights: ", weight)
@@ -19,6 +22,7 @@ for names in listPpl:
 
 def getBMI(height, weight):
     return weight * (703 / (height ** 2))
+
 
 def statusBMI(bmi):
     if bmi < 18.5:
@@ -28,6 +32,35 @@ def statusBMI(bmi):
     elif bmi > 25:
         return "overweight"
 
+
 underWeight = 0
 normalWeight = 0
 overWeight = 0
+
+# For Loop to assign bmis to ppl in the list
+for ppl in range(len(listPpl)):
+    name = listPpl[ppl]  # gets the name of the person in the list
+    bmi = getBMI(height[ppl], weight[ppl])  # gets the height-weight of the same person and calculates bmi
+    print("{} has a BMI of: {}".format(name, bmi))  # displays the name and bmi
+    bmis.append(bmi)  # post the bmi to the bmis arrays
+
+
+# For Loop to draw conclusions based on bmi data
+for bmi in (bmis):
+    status = statusBMI(bmi)
+    if status == "underweight":
+        underWeight += 1
+    elif status == "normal weight":
+        normalWeight += 1
+    else:
+        overWeight += 1
+
+
+print("There are {} underweight people.".format(underWeight))
+print("There are {} normal weight people.".format(normalWeight))
+print("There are {} overweight people".format(overWeight))
+
+
+
+
+

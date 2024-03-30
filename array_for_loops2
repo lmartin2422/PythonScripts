@@ -1,0 +1,14 @@
+# import array as array1
+
+array1 = []
+index = 0
+while index < 2:
+    userInput = str(input("Enter a planet: "))
+    planets = array1.append(userInput)
+    print(array1)
+    index += 1
+
+for i in array1:
+    new = i.upper()
+    print(new)
+

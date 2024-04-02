@@ -1,0 +1,9 @@
+while True:
+    team = str(input("What is your favorite sports team?\n  If none, type 'n/a'.\n"))
+
+    if team == "n/a":
+        print("No team")
+        break
+    else:
+        print(team.capitalize())
+

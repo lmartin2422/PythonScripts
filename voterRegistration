@@ -1,0 +1,37 @@
+# Voters Registration
+
+while 1:
+    print("Voter's Registration Application")
+
+    firstName = str(input(" Enter your first name: "))
+    exitProgram = str(input(" Do you wish to continue?\n yes or no: "))
+    if exitProgram == "no":
+        print("Registration cancelled")
+        break
+
+    lastName = str(input(" Enter your last name: "))
+    exitProgram = str(input(" Do you wish to continue?\n yes or no: "))
+    if exitProgram == "no":
+        print("Registration cancelled")
+        break
+
+    age = int(input("\n Enter your age?: "))
+    exitProgram = str(input(" Do you wish to continue?\n yes or no: "))
+    if exitProgram == "no":
+        print("Registration cancelled")
+        break
+
+    country = str(input(" Are you a citizen of the USA?\n yes or no"))
+    # True == "yes"
+    # False == "no"
+    exitProgram = str(input(" Do you wish to continue?\n yes or no: "))
+    if exitProgram == "no":
+        print("Registration cancelled")
+        break
+
+    fieldCheck = False
+    ageCheck = False
+    citizenCheck = False
+
+    if firstName == '' or lastName == '' or age == '' or country == '':
+        print("\nError! A field was blank")

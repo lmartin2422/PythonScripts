@@ -1,0 +1,9 @@
+numbers = [9, 8, 3, 4]
+numbers.sort()
+numbers.pop(0)
+print(numbers)
+print(f"The second largest number is: {numbers[-2]}")
+
+
+for i in numbers:
+    print(i)

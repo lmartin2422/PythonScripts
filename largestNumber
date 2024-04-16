@@ -1,9 +1,51 @@
+import factorial
+
+print(f"factorial number: {factorial.factorial}")
+
+
 numbers = [9, 8, 3, 4]
 numbers.sort()
 numbers.pop(0)
 print(numbers)
 print(f"The second largest number is: {numbers[-2]}")
+numbers.append(factorial.originalNumber)
+print(numbers)
 
 
 for i in numbers:
     print(i)
+
+
+numbers2 = [1, 9, 3, 6, 5]
+numbers2.pop()
+print("Numbers2", numbers2)
+
+numbers2.remove(1)
+print("removed:", numbers2)
+
+numbers2.append(1)
+numbers2.sort()
+print("sorted list:", numbers2)
+numbers2.index(3)
+print("index", numbers2)
+
+for i in numbers2:
+    if i > 1:
+        print(f"{i} is greater than 1")
+
+
+for ii in range(10):
+    print(f"{ii} is greater again that 1")
+
+
+def littleFunction():
+    letter = str(input("Enter a letter: "))
+    print(letter)
+    if len(letter) > 1 and letter.isalpha():
+        print("did not type a letter")
+        print("Letter length is:",len(letter))
+
+
+
+
+littleFunction()

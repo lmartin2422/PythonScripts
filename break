@@ -1,9 +1,16 @@
-while True:
-    team = str(input("What is your favorite sports team?\n  If none, type 'n/a'.\n"))
+import factorial
 
-    if team == "n/a":
+while True:
+    team = str(input("What is your favorite sports team?\n  If none, type 'n'.\n"))
+
+    if team == "n":
         print("No team")
         break
     else:
         print(team.capitalize())
+
+
+factorial.rectangle(5, 5, 9, 5)
+
+
 

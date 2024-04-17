@@ -1,0 +1,55 @@
+originalNumber = 6
+factorial = 1
+
+for i in range(originalNumber):
+    factorial *= i + 1
+
+print(factorial)
+
+
+while factorial > 520:
+    print("Number is: ", factorial)
+    break
+
+
+
+def rectangle(x1,y1,x2,y2):
+
+    area1 = x1 * y1
+    area2 = x2 * y2
+    print(f"Areas are {area1} and {area2}")
+    print("Area of the small circle is: ", area2 - area1)
+    list2 = [x1, x2, y1, y2]
+    print("OG list: ", list2)
+    list2.sort()
+    print(f"Sorted list: {list2}")
+    print(list2[-2])
+
+    for i in list2:
+        print(i)
+
+    phrase = str(input("Enter a phrase: "))
+    group1 = []
+    for i in phrase:
+        group1.append(i)
+        print(i)
+        print(group1)
+
+    group2 = group1[::-1]
+
+    if group1 == group2:
+        print("Palindrome")
+    else:
+        print("not palindrome")
+
+
+
+
+
+
+
+
+
+
+
+

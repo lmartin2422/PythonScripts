@@ -1,0 +1,16 @@
+def credit_card_number():
+    creditCard = [9, 3, 4, 5, 6, 7, 8, 9, 0, 3, 2]
+    last4 = creditCard[-4:]
+    print("The last 4 digits of the CC: ", last4)
+
+
+    cc2 = "93246890642123"
+    hidden_part = '*' * (len(cc2)-4)  # asterisks for each number
+    last40 = cc2[-4:]
+    hidden_number = hidden_part + last40
+    print("masked cc: ", hidden_number)
+
+
+
+
+credit_card_number()

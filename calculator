@@ -1,0 +1,18 @@
+def calculator(int1, operand, int2):
+    if operand == "+":
+        print(f"The sum of {int1} + {int2} = ", (int1 + int2))
+    elif operand == "-":
+        print(f"The difference between {int1} - {int2} is", (int1 - int2))
+    elif operand == "/":
+        print(f"The divisor of {int1} / {int2} is ", (int1 / int2))
+    elif operand == "*":
+        print(f"The product of {int1} * {int2} is ", (int1 * int2))
+    else:
+        print("Incorrect input")
+
+
+int1 = int(input("Enter a number for int 1:\n"))
+int2 = int(input("Enter a number for int 2:\n"))
+operand = str(input("Pick one: +, -, /, *\n"))
+
+calculator(int1, operand, int2)

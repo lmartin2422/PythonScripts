@@ -1,0 +1,24 @@
+def XO(word):
+    countX = 0
+    countO = 0
+
+    for i in word:
+        if i == "X":
+            countX += 1
+        elif i == "x":
+            countX += 1
+        elif i == "O":
+            countO += 1
+        elif i == "o":
+            countO += 1
+
+    print(f"The word {word} has {countX} Xs and {countO} 0s")
+
+    if countX == countO:
+        print(True)
+    else:
+        print(False)
+
+
+
+XO("oooxxxx")

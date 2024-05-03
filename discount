@@ -1,0 +1,10 @@
+def discount(price, percentage):
+    discountPrice = price * (percentage/100)
+    print(f"The discount amount of ${price} and {percentage}% is ${discountPrice}")
+
+price = int(input("Enter a price:\n"))
+percentage = int(input("Enter a percent amount:\n"))
+discount(price, percentage)
+
+amounts = []
+amounts.append(price)

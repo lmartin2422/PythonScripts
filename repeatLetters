@@ -1,0 +1,8 @@
+def repeatLetters(word):
+
+    doubled_string = ''
+    for i2 in word:
+        doubled_string += i2 * 2
+    print(doubled_string)
+
+repeatLetters("time")

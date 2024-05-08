@@ -1,0 +1,14 @@
+def remainder():
+
+    number1 = 15
+    number2 = 4
+    product = number1 / number2
+    modulator = number1 % number2
+
+    print(product)
+
+
+    print("The remainder is: ", product)
+    print("The modulator is: ", modulator)
+
+remainder()

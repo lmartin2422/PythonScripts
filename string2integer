@@ -1,0 +1,5 @@
+def string2integer(string):
+    number = int(string) + 1
+    print(number)
+
+string2integer("11")

@@ -1,0 +1,18 @@
+"""
+Create a function that takes the age in years and returns the age in days.
+"""
+
+
+def age_in_days():
+    while True:
+        days = 365
+        age = int(input("Enter an age:\n"))
+
+
+        max_days = age * days
+        min_days = (age * days) - 364
+
+        print(f"The age in days of a {age} year old is between {min_days} days and {max_days} days.")
+
+age_in_days()
+12

@@ -1,0 +1,19 @@
+"""
+Create a function that takes length and width and finds the perimeter of a rectangle.
+"""
+
+
+def rectangle_dimensions(x1, y1, x2, y2):
+    if int(y2) > int(y1):
+        if int(x2) > int(x1):
+            length_of_x_axis = int(x2-x1)
+            length_of_y_axis = int(y2-y1)
+            perimeter = int(y1 + y2) + int(x1 + x2)
+            area = length_of_x_axis * length_of_y_axis
+            print(f"The area of the rectangle is {area}")
+            print(f"The perimeter of the rectangle is {perimeter}")
+    else:
+        print(f"Object is not a rectangle\nThe dimensions are x1={x1}, x2={x2}, y1={y1}, y2={y2}")
+
+
+rectangle_dimensions(2, 3, 5, 10)

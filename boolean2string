@@ -1,0 +1,7 @@
+def boolean2string(flag):
+    return str(flag)
+
+
+print(boolean2string(True))
+print(boolean2string(False))
+

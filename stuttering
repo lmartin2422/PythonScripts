@@ -1,0 +1,18 @@
+"""
+Write a function that stutters a word as if someone is struggling to read it. The first two letters are repeated twice with an ellipsis ... and space after each, and then the word is pronounced with a question mark ?.
+"""
+
+
+def stuttering(word):
+    first2 = word[0:2]
+    first2.join(" ")
+    print(f""" "{first2}... {first2}... {word}?" """)
+
+    #for letter in word:
+    #    print(f"This letter is {letter}")
+
+
+stuttering("incredible")
+stuttering("enthusiastic")
+stuttering("outstanding")
+

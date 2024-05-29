@@ -1,0 +1,24 @@
+"""
+Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
+"""
+
+
+def skywalkers(relation):
+
+    if relation == "darth vader":
+        return "Luke, I am your father"
+    elif relation == "leia":
+        return "Luke, I am your sister."
+    elif relation == "han":
+        return "Luke, I am your brother in law."
+    elif relation == "r2d2":
+        return "Luke, I am your droid"
+    else:
+        return "Error!"
+
+
+
+
+
+print(skywalkers("R2D2".lower()))
+

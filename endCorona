@@ -1,0 +1,17 @@
+"""
+Create a function that takes the number of daily average recovered cases recovers, daily average new_cases,
+current active_cases, and returns the number of days it will take to reach zero cases.
+"""
+
+
+def end_corona(recovers, new_cases, active_cases):
+    net_reduction = recovers - new_cases
+    if net_reduction <= 0:
+        print("recovery rate too low for amount of new cases")
+
+    days = (active_cases / net_reduction)
+    return int(days) if days.is_integer() else int(days) + 1
+
+
+print(end_corona(100, 50, 1000))
+

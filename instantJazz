@@ -1,0 +1,12 @@
+"""
+Create a function which concatenates the number 7 to the end of every chord in a list.
+Ignore all chords which already end with 7.
+"""
+
+
+def jazz_chords(chord):
+    for i in chord:
+        print(i+"7")
+
+
+jazz_chords(["G", "F"])

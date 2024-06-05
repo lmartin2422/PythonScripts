@@ -1,0 +1,18 @@
+"""
+Create a function that takes an integer and returns the factorial of that integer.
+That is, the integer multiplied by all positive lower integers.
+"""
+
+
+
+def factorial(number):
+    factorial1 = 1
+    for i in range(number):
+        factorial1 *= number - i
+    return factorial1
+
+
+
+print(factorial(3))
+print(factorial(5))
+print(factorial(13))

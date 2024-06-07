@@ -6,11 +6,11 @@ as the entire number. Otherwise, return False.
 
 def same_parity(number):
 
-    str_number = str(abs(number))
+    str_number = str(number)  # converts the int to a str
     digit_sum = 0
 
-    for char in str_number:
-        digit_sum += int(char)
+    for char in str_number:  # iterates through the str
+        digit_sum += int(char)  # converts the str back to an int, adds it up
 
     if number % 2 == 0:
         og_number = "even"
@@ -28,6 +28,4 @@ def same_parity(number):
         return False
 
 
-
-
-print(same_parity(1234))
+print(same_parity(11))

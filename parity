@@ -1,0 +1,33 @@
+"""
+Create a function that takes a number as input and returns True if the sum of its digits has the same parity
+as the entire number. Otherwise, return False.
+"""
+
+
+def same_parity(number):
+
+    str_number = str(abs(number))
+    digit_sum = 0
+
+    for char in str_number:
+        digit_sum += int(char)
+
+    if number % 2 == 0:
+        og_number = "even"
+    else:
+        og_number = "odd"
+
+    if digit_sum % 2 == 0:
+        digit_sum = "even"
+    else:
+        digit_sum = "odd"
+
+    if og_number == digit_sum:
+        return True
+    else:
+        return False
+
+
+
+
+print(same_parity(1234))

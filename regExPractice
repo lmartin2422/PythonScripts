@@ -1,0 +1,28 @@
+"""
+The vertical bar | is the equivalent to "or" in RegEx. The regular expression x|y matches either "x" or "y".
+Write the regular expression that will match all red flag and blue flag in a string.
+You must use | in your expression. Flags can come in any order.
+"""
+
+import re
+
+
+def reg_ex():
+    txt1 = "red flag blue flag"
+    txt2 = "yellow flag red flag blue flag green flag"
+    txt3 = "pink flag red flag black flag blue flag green flag red flag"
+    pattern = r"red flag|blue flag"
+
+    match1 = re.findall(pattern, txt1)
+    match2 = re.findall(pattern, txt2)
+    match3 = re.findall(pattern, txt3)
+
+    print(match1)
+    print(match2)
+    print(match3)
+
+
+
+
+
+reg_ex()

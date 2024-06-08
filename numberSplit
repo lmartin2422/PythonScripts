@@ -1,0 +1,30 @@
+"""
+Given a number, return a list containing the two halves of the number.
+If the number is odd, make the rightmost number higher.
+"""
+
+
+def number_split(number):
+    halves = []
+    half = number / 2
+
+    if half.is_integer():
+        int(half)
+        halves.append(half)
+        halves.append(half)
+        print(halves)
+        # print(number, f"is the sum of {half} and {half}")
+    else:
+        adding = half + .5
+        subtraction = half - .5
+        halves.append(subtraction)
+        halves.append(adding)
+        print(halves)
+        # print(number, f"is the sum of {subtraction} and {adding}")
+
+
+number_split(4)
+number_split(10)
+number_split(11)
+number_split(-9)
+

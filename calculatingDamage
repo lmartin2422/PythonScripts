@@ -1,0 +1,20 @@
+"""
+Create a function that takes damage and speed (attacks per second)
+and returns the amount of damage after a given time.
+"""
+
+
+def calculating_damage(damage, speed, time):
+    if time.lower() == "second":
+        return damage*(speed * 1)
+    elif time.lower() == "minute":
+        return damage*(speed * 60)
+    elif time.lower() == "hour":
+        return damage*(speed * 60 * 60)
+    else:
+        return "Error!"
+
+
+print(calculating_damage(40, 5, "second"))
+print(calculating_damage(100, 1, "minute"))
+print(calculating_damage(2, 100, "hour"))

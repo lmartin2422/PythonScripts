@@ -1,0 +1,21 @@
+"""
+Create a function that validates whether three given integers form a Pythagorean triplet.
+The sum of the squares of the two smallest integers must equal the square of the largest number to be validated.
+"""
+
+
+def pythagorean_triplet(side1, side2, side3):
+    triangle = [side1, side2, side3]
+    triangle.sort()
+    x = (triangle[0] * triangle[0]) + (triangle[1] * triangle[1])
+    y = triangle[2] * triangle[2]
+
+    if x == y:
+        return True
+    else:
+        return False
+
+
+print(pythagorean_triplet(3, 4, 5))
+print(pythagorean_triplet(13, 5, 12))
+print(pythagorean_triplet(1, 2, 3))

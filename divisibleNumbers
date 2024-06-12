@@ -1,0 +1,29 @@
+"""
+Create a function that takes three arguments a, b, c and returns the sum of the numbers
+that are evenly divided by c from the range a, b inclusive.
+"""
+
+
+matches = []
+
+
+# def divisible_numbers(a, b, c):
+#     total_sum = 0
+#     for i in range(a, b+1):
+#         if i % c == 0:
+#             total_sum += i
+#     print(total_sum)
+
+
+
+def divisible_numbers(a, b, c):
+    for i in range(a, b+1):
+        if i % c == 0:
+            matches.append(i)
+    print(sum(matches))
+    matches.clear()
+
+
+divisible_numbers(1, 10, 20)
+divisible_numbers(1, 10, 2)
+divisible_numbers(1, 10, 3)

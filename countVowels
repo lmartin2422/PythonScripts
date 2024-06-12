@@ -1,0 +1,19 @@
+"""
+Create a function that takes a string and returns the number (count) of vowels contained within it.
+"""
+
+def count_vowels(word):
+    vowels = ["a", "e", "i", "o", "u"]
+    matches = []
+
+    for letter in word.lower():
+        if letter in vowels:
+            matches.append(letter)
+    return f"There are {len(matches)} vowels in {word}."
+
+
+print(count_vowels("Celebration"))
+print(count_vowels("Palm"))
+print(count_vowels("Prediction"))
+print(count_vowels("OpenAI"))
+

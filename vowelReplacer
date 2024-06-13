@@ -1,0 +1,22 @@
+"""
+Create a function that replaces all the vowels in a string with a specified character.
+
+"""
+
+
+def vowel_replacer(phrase, replacement):
+    vowels = ["a", "e", "i", "o", "u"]
+    new_word = []
+
+    for letter in phrase:
+        if letter in vowels:
+            new_word.append(replacement)
+        else:
+            new_word.append(letter)
+    return ''.join(new_word)
+
+
+print(vowel_replacer("the aardvark", "#"))
+print(vowel_replacer("minnie mouse", "?"))
+print(vowel_replacer("shakespeare", "*"))
+

@@ -1,0 +1,54 @@
+"""
+Create a function that takes a string,
+checks if it has the same number of "x"s and "o"s and returns either True or False.
+"""
+
+
+def x_and_o(word):
+    check_for_x = "x"
+    check_for_0 = "o"
+    count_x = 0
+    count_o = 0
+
+    for i in word.lower():
+        if check_for_x == i in word.lower():
+            count_x += 1
+
+    for j in word.lower():
+        if check_for_0 == j in word.lower():
+            count_o += 1
+
+    print(f"There are {count_x} x's and {count_o} o's in {word}")
+
+    if count_x == count_o:
+        print(True)
+    else:
+        print(False)
+
+
+x_and_o("ooxx")
+print()
+x_and_o("xooxx")
+print()
+x_and_o("ooxXm")
+print()
+x_and_o("zpzpzpp")
+print()
+x_and_o("zzoo")
+print()
+
+
+def alt_x_and_o(alt_word):
+    alt_word = alt_word.lower()
+    x_count = alt_word.count("x")
+    o_count = alt_word.count("o")
+
+    print(f"Alt - There are {x_count} x's nd {o_count} o's in {alt_word}")
+    if x_count == o_count:
+        print(True)
+    else:
+        print(False)
+
+
+alt_x_and_o("ooxx")
+

@@ -1,0 +1,20 @@
+"""
+Create a function that takes a list and...
+finds the integer which appears an odd number of times.
+"""
+
+
+def odd_integer(list_of_numbers):
+    sorted_list = sorted(list_of_numbers)
+    print(sorted_list)
+
+    for i in sorted_list:
+        if list_of_numbers.count(i) == 1 or list_of_numbers.count(i) == 3 or list_of_numbers.count(i) == 5:
+            print(f"These are the numbers listed an odd amount of times: {i}")
+
+
+odd_integer([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])
+print("\nNext list")
+odd_integer([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])
+print("\nNext list")
+odd_integer([10])

@@ -1,0 +1,20 @@
+"""
+The "Reverser" takes a string as input and
+returns that string in reverse order, with the opposite case.
+"""
+
+
+def reverser(phrase):
+    new_word = []
+    for i in phrase:
+        if i == i.upper():
+            new_word.append(i.lower())
+        elif i == i.lower():
+            new_word.append(i.upper())
+
+    print("".join(new_word[::-1]))
+
+
+reverser("Hello World")
+reverser("ReVeRsE")
+reverser("Radar")

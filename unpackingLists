@@ -1,0 +1,54 @@
+"""
+With Python 3, you can assign variables from lists in a much more succinct way. Create variables first, middle and
+last from the given list using destructuring assignment where:
+"""
+
+
+def example():
+    # Example list
+    writeyourcodehere = [1, 2, 3, 4, 5, 6]
+
+    # Destructuring assignment to unpack the list
+    first, *middle, last = writeyourcodehere
+
+    # Print the variables
+    print(first)  # Output: 1
+    print(middle)  # Output: [2, 3, 4, 5]
+    print(last)  # Output: 6
+
+    return
+
+
+example()
+print()
+
+
+def unpacking_lists():
+    new_list = [8, 9, 10, 11, 12, 13]
+
+    first, *middle, last = new_list
+
+    print(first)
+    print(middle)
+    print(last)
+
+    return
+
+
+unpacking_lists()
+print()
+
+
+def unpacking_strings():
+    new_strings = ["tom", "ashley", "beth", "sarah", "hannah", "meredith"]
+
+    first, *middle, last = new_strings
+
+    print(first)
+    print(" ".join(middle))
+    print(last)
+
+    return
+
+
+unpacking_strings()

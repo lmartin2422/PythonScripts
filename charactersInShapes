@@ -4,29 +4,36 @@ You will be given a list of strings which make up a shape in the compiler (i.e. 
 """
 
 
-def shapes():
+def total_characters(shape):
+    # Initialize a counter for the total number of characters
+    total_chars = 0
 
-    # RECTANGLE
+    # Iterate over each string in the list
+    for row in shape:
+        # Add the length of the string to the total counter
+        total_chars += len(row)
 
-    rectangle = ["###########\n",
-                 "###########\n"]
-    print("Rectangle\n", " ".join(rectangle))
-    count = 0
-    for i in rectangle:
-        count += len(i)
-    print(count)
-
-    # SQUARE
-    square = ["###\n",
-              "###\n",
-              "###\n"]
-    print("Square\n", " ".join(square))
-
-    # LINE
-    line = ["---------"]
-    print("Line\n", " ".join(line))
-
-    return
+    return total_chars
 
 
-shapes()
+# Example usage
+shape1 = [
+    "****",
+    "****",
+    "****",
+    "****"
+]
+
+shape2 = [
+    "******",
+    "******",
+    "******"
+]
+
+shape3 = [
+    "**********"
+]
+
+print(total_characters(shape1))  # Output: 16
+print(total_characters(shape2))  # Output: 18
+print(total_characters(shape3))  # Output: 10

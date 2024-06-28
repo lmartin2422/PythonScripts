@@ -1,0 +1,38 @@
+"""
+Write a function that moves all elements of one type to the end of the list.
+"""
+
+
+def move_to_end(list_numbers, number):
+    for i in list_numbers:
+        list_numbers.remove(number)
+        list_numbers.append(number)
+    return list_numbers
+
+
+print(move_to_end([1, 3, 2, 4, 4, 1], 1))
+print(move_to_end([7, 8, 9, 1, 2, 3, 4], 9))
+print(move_to_end(["a", "a", "a", "b"], "a"))
+print()
+
+
+def move_elements_to_end(lst, element_type):
+    elements_of_type = []
+    other_elements = []
+
+    for element in lst:
+        if isinstance(element, element_type):
+            elements_of_type.append(element)
+        else:
+            other_elements.append(element)
+
+    return other_elements + elements_of_type
+
+
+lst1 = [1, "hello", 3.14, "world", 2, "python", 4, 5]
+lst2 = [1, 2, 3, 4.5, 5.6, 7, 8.9]
+lst3 = ["apple", 42, "banana", 73, "cherry", 100]
+
+print(move_elements_to_end(lst1, str))
+print(move_elements_to_end(lst2, float))
+print(move_elements_to_end(lst3, int))

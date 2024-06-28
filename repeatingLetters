@@ -1,0 +1,17 @@
+"""
+Create a function that takes a string and
+returns a string in which each character is repeated once.
+"""
+
+
+def repeating_letters(word):
+    new_word = []
+    for i in word:
+        new_word.append(i * 2)
+
+    return "".join(new_word)
+
+
+print(repeating_letters("String"))
+print(repeating_letters("Hello World!"))
+print(repeating_letters("1234!_"))

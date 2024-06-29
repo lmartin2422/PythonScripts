@@ -1,0 +1,21 @@
+"""
+Create a function that reverses a boolean value and
+returns the string "boolean expected" if another variable type is given.
+"""
+
+
+def flip_boolean(value):
+    if isinstance(value, bool):
+        if value:
+            return False
+        elif not value:
+            return True
+    else:
+        return """"boolean expected" """
+
+
+
+print(flip_boolean(True))
+print(flip_boolean(False))
+print(flip_boolean(0))
+print(flip_boolean(None))

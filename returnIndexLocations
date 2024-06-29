@@ -1,0 +1,15 @@
+"""
+Create a function that takes a single string as argument and
+returns an ordered list containing the indices of all capital letters in the string.
+"""
+
+
+def return_caps_index(phrase):
+    index_locations = []
+    for i in range(len(phrase)):  # makes the phrase somewhat numerical
+        if phrase[i].isupper():  # checks if an element at an index location is upper case
+            index_locations.append(i)  # puts that index location in phrase list
+    return index_locations
+
+
+print(return_caps_index("eDaBiT"))

@@ -1,0 +1,18 @@
+"""
+Create a function that takes a list of strings and integers, and
+filters out the list so that it returns a list of integers only.
+"""
+
+
+def filter_strings(array):
+    new_array = []
+    for i in array:
+        if isinstance(i, int):
+            new_array.append(i)
+
+    return new_array
+
+
+print(filter_strings([1, 2, 3, "a", "b", 4]))
+print(filter_strings(["A", 0, "eDABIT", 1729, "Python", "1729"]))
+print(filter_strings(["Nothing", "here"]))

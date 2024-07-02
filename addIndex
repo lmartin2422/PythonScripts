@@ -1,0 +1,16 @@
+"""
+Given a list of numbers, create a function which returns the list but with each element's index in the list added to itself.
+This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
+"""
+
+
+def add_index(list1):
+    new_list = []
+
+    for i in range(len(list1)):
+        new_list.append(list1[i] + i)
+
+    return new_list
+
+
+print(add_index([0, 0, 0, 0, 0]))

@@ -1,0 +1,22 @@
+"""
+Create a function that takes a list of numbers between 1 and 10 (excluding one number) and returns the missing number.
+"""
+
+
+def find_missing_numbers(numbers):
+    first10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    total = 0
+    for i in first10:
+        total += i
+
+    given_total = 0
+    for j in numbers:
+        given_total += j
+
+    return total - given_total
+
+
+print(find_missing_numbers([1, 2, 3, 4, 6, 7, 8, 9, 10]))
+print(find_missing_numbers([7, 2, 3, 6, 5, 9, 1, 4, 8]))
+print(find_missing_numbers([10, 5, 1, 2, 4, 6, 8, 3, 9]))

@@ -1,0 +1,23 @@
+"""
+Write a function that takes a list of elements and returns only the integers.
+"""
+
+
+def return_integers(group):
+    integers = []
+    non_integers = []
+
+    for i in group:
+        if isinstance(i, int):
+            integers.append(i)
+        else:
+            non_integers.append(i)
+    print(integers)
+
+    print(" ".join(str(i) for i in integers))
+    # print(ex)
+
+    print(" ".join(non_integers))
+
+
+return_integers([9, 2, "space", "car", "lion", 16])

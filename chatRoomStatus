@@ -1,0 +1,30 @@
+"""
+Write a function that returns the number of users in a chatroom based on the following rules:
+
+If there is no one, return "no one online".
+If there is 1 person, return "user1 online".
+If there are 2 people, return "user1 and user2 online".
+If there are n>2 people, return the first two names and add "and n-2 more online".
+For example, if there are 5 users, return:
+
+"user1, user2 and 3 more online"
+"""
+
+
+def chat_room_status(chat):
+    if len(chat) == 0:
+        return "no one online"
+    elif len(chat) == 1:
+        return " ".join(chat) + " online"
+    elif len(chat) == 2:
+        return " and ".join(chat) + " online"
+    elif len(chat) > 2:
+        return ", ".join(chat[0:2]) + f" and {len(chat) -2} more online"
+    else:
+        "Error"
+
+
+print(chat_room_status([]))
+print(chat_room_status(["paRIE_to"]))
+print(chat_room_status(["s234f", "mailbox2"]))
+print(chat_room_status(["pap_ier44", "townieBOY", "panda321", "motor_bike5", "sandwichmaker833", "violinist91"]))

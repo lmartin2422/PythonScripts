@@ -1,0 +1,17 @@
+"""
+Given a list of numbers, write a function that returns a list that...
+Has all duplicate elements removed.
+Is sorted from least to greatest value.
+"""
+
+
+def purge_and_organize(numbers):
+    non_duplicates = set(numbers)  # removes duplicates and orders the list
+    print(non_duplicates)
+    print()
+
+
+purge_and_organize([1, 2, 3, 4])
+purge_and_organize([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
+purge_and_organize([6, 7, 3, 2, 1])
+purge_and_organize([10, 9, 8, 7, 6])

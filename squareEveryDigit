@@ -1,0 +1,31 @@
+"""
+Create a function that squares every digit of a number.
+"""
+
+
+def square_digits(num):
+    # Convert the number to a string to iterate through each digit
+    num_str = str(num)
+
+    # Create an empty string to store the result
+    result = ""
+
+    # Iterate through each character (digit) in the string
+    for digit in num_str:
+        # Convert the character back to an integer
+        digit_int = int(digit)
+
+        # Square the integer digit
+        squared_digit = digit_int * digit_int
+
+        # Convert the squared digit back to a string and add it to the result
+        result += str(squared_digit)
+
+    # Convert the result string back to an integer and return it
+    return int(result)
+
+
+# Example usage
+print(square_digits(9119))  # Output: 811181
+print(square_digits(2483))  # Output: 416649
+print(square_digits(3212))  # Output: 9414

@@ -1,0 +1,15 @@
+"""
+Count items in a list
+"""
+from collections import Counter
+
+
+def count_items():
+    fruits = ["bananas", "apples", "oranges", "pears", "bananas", "apples"]
+
+    fruit_count = Counter(fruits)
+
+    print(fruit_count)
+
+
+count_items()

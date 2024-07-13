@@ -5,18 +5,37 @@ True or False depending on if it's an "isogram".
 """
 
 
-def is_isogram(word):
-    word = word.lower()  # converts to lower case
-    seen_characters = set()  # create an empty set to store the unique characters
+# def is_isogram(word):
+#     word = word.lower()  # converts to lower case
+#     seen_characters = set()  # create an empty set to store the unique characters
+#     # REMEMBER SET() TELLS YOU IF A DUPLICATE EXIST AND REMOVES IT
+#
+#     for letter in word:
+#         if letter in seen_characters:
+#             print("if ", seen_characters)
+#             return False
+#         else:
+#             seen_characters.add(letter)
+#             print("else", seen_characters)
+#     return True
+#
+#
+# print(is_isogram("Algorism"))
+# print(is_isogram("PasSword"))
+# print(is_isogram("Consecutive"))
 
-    for letter in word:
-        if letter in seen_characters:
+
+def is_isogram_alt(word):
+    word = word.lower()
+    seen_characters = []
+
+    for letters in word:
+        if letters in seen_characters:
             return False
         else:
-            seen_characters.add(letter)
+            seen_characters.append(letters)
     return True
 
 
-print(is_isogram("Algorism"))
-print(is_isogram("PasSword"))
-print(is_isogram("Consecutive"))
+print(is_isogram_alt("Algorism"))
+print(is_isogram_alt("PasSword"))

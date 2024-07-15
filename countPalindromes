@@ -1,0 +1,19 @@
+"""
+Create a function that returns the number of palindrome numbers in a specified range (inclusive).
+
+For example, between 8 and 34, there are 5 palindromes: 8, 9, 11, 22 and 33.
+Between 1550 and 1552 there is exactly one palindrome: 1551.
+"""
+
+
+def count_palindromes(first_number, second_number):
+
+    count = 0
+    for numbers in range(first_number, second_number):
+        num_str = str(numbers)
+        if num_str == num_str[::-1]:
+            count += 1
+    print(count)
+
+
+count_palindromes(1, 10)

@@ -1,0 +1,40 @@
+"""
+Create a function that returns the mean of all digits.
+"""
+
+
+def mean_digits(number):
+    converted_to_str = []
+    strings = set(str(number))
+    for i in strings:
+        converted_to_str.append(i)
+    print(converted_to_str)
+
+    converted_to_int = []
+    for j in converted_to_str:
+        converted_to_int.append(int(j))
+    print(converted_to_int)
+
+    mean = (sum(converted_to_int)) / len(converted_to_int)
+    print(mean)
+
+
+mean_digits(42)
+mean_digits(12345)
+mean_digits(666)
+print()
+
+
+def alternate_way(number):
+    digits = str(number)
+    total = 0
+
+    for digit in digits:
+        total += int(digit)
+
+    mean_value = total / len(digits)
+
+    return mean_value
+
+
+print(alternate_way(42))

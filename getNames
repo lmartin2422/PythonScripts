@@ -1,0 +1,12 @@
+"""
+Create a function that takes a dictionary of student names and returns a list of student names in alphabetical order.
+"""
+
+
+def get_names(students):
+    sorted_names = sorted(students.values())  # values returns the values, .keys returns the field name
+
+    print(sorted_names)
+
+
+get_names({"Student 1": "Steve", "Student 2": "Becky", "Student 3": "John"})

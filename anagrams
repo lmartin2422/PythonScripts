@@ -1,0 +1,32 @@
+"""
+Create a function that takes two strings and returns either:
+ True or False depending on whether they're anagrams or not.
+"""
+
+
+def anagrams(word1, word2):
+    if sorted(word1.lower()) == sorted(word2.lower()):
+        return True
+    else:
+        return False
+
+
+print(anagrams("cristian", "Cristina"))
+print(anagrams("Dave Barry", "Ray Adverb"))
+print(anagrams("Nope", "Note"))
+print()
+print()
+
+
+def anagrams_alt(word1, word2):
+    if set(word1.lower()) == set(word2.lower()):
+        print(set(word1.lower()))
+        print(set(word2.lower()))
+        return True
+    else:
+        return False
+
+
+print(anagrams_alt("cristian", "Cristina"))
+print(anagrams_alt("Dave Barry", "Ray Adverb"))
+print(anagrams_alt("Nope", "Note"))

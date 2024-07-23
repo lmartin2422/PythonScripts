@@ -10,8 +10,13 @@ The solution should be one string with a comma in between every "Hello (Name)".
 def say_hello(name):
     greetings = []
     for i in name:
-        greetings.append(f"Hello {i}")
+        if len(name) > 1:
+            greetings.append(f"Hello {i}")
+        else:
+            print("Nothing there")
     print(", ".join(greetings))
 
 
 say_hello(["Joe", "Angela"])
+say_hello([" "])
+

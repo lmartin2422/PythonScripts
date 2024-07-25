@@ -1,0 +1,68 @@
+"""
+A number n is automorphic if n^2 ends in n.
+
+For example: n=5, n^2=25
+
+Create a function that takes a number and returns True
+if the number is automorphic, False if it isn't.
+"""
+
+
+def automorphic_numbers(number):
+
+    squared = number * number
+    squared_string = str(squared)
+    number_string = str(number)
+
+    elements_of_square = []
+    elements_of_number = []
+
+    for digit in squared_string:
+        elements_of_square.append(digit)
+    last_number_in_square = int(elements_of_square[-1])
+
+    for digit in number_string:
+        elements_of_number.append(digit)
+    last_number_in_number = int(elements_of_number[-1])
+
+    if last_number_in_square == last_number_in_number:
+        return True, last_number_in_number, last_number_in_square
+    else:
+        return False, last_number_in_number, last_number_in_square
+
+
+print(automorphic_numbers(5))
+print(automorphic_numbers(8))
+print(automorphic_numbers(76))
+print()
+
+
+def is_automorphic(number):
+    squared = number * number
+    squared_string = str(squared)
+    number_string = str(number)
+
+    if squared_string.endswith(number_string):
+        return True, squared_string, number_string
+    else:
+        return False, squared_string, number_string
+
+
+print(is_automorphic(5))
+print(is_automorphic(8))
+print(is_automorphic(76))
+print()
+
+
+def is_automorphic2(number):
+    squared = number * number
+    squared_string = str(squared)
+    number_string = str(number)
+
+    return squared_string.endswith(number_string)
+
+
+print(is_automorphic2(5))
+print(is_automorphic2(8))
+print(is_automorphic2(76))
+

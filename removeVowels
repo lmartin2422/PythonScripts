@@ -1,0 +1,41 @@
+"""
+Create a function that takes a string and returns a new string with all vowels removed.
+"""
+
+
+def remove_vowels(phrase):
+
+    return phrase.replace("A".lower(), "").replace("E".lower(), "").replace("I".lower(), "").replace("O".lower(), "")\
+        .replace("U".lower(), "")
+
+
+print(remove_vowels("I have never seen a thin person drinking Diet Coke."))
+print()
+
+
+def another_way(phrase):
+    vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    results = []
+    for i in phrase:
+        if i not in vowels:
+            results.append(i)
+    return "These are results: " + "".join(results)
+
+
+print(another_way("I have never seen a thin person drinking Diet Coke."))
+print()
+
+
+def remove_vowels(input_string):
+    # Define a set of vowels to remove
+    vowels = set("aeiouAEIOU")
+
+    # Use a list comprehension to filter out vowels from the input string
+    result = [char for char in input_string if char not in vowels]
+
+    # Join the list into a string and return it
+    return ''.join(result)
+
+
+# Example usage
+print(remove_vowels("I have never seen a thin person drinking Diet Coke."))

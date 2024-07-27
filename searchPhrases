@@ -1,0 +1,26 @@
+"""
+Your job is to help me create a function that takes a string and checks to see if it contains the following words or phrases:
+
+"anime"
+"meme"
+"vines"
+"roasts"
+"Danny DeVito"
+If it does, return "NO!". Otherwise, return "Safe watching!".
+
+
+"""
+
+
+def prevent_distractions(phrase):
+    check_for = ["anime", "meme", "vines", "roasts", "Danny DeVito"]
+
+    for word in check_for:
+        if word in phrase:
+            return "No!"
+    return "Safe Watching!"
+
+
+print(prevent_distractions("vines that butter my eggroll"))
+print(prevent_distractions("Hot pictures of Danny DeVito"))
+print(prevent_distractions("How to ace BC Calculus in 5 Easy Steps"))

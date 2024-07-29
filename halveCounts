@@ -1,0 +1,15 @@
+"""
+Given two integers a and b,
+return how many times a can be halved while still being greater than b.
+"""
+
+
+def halves_count(a, b):
+    count = 0
+    while a > b:
+        a /= 2
+        count += 1
+    return count
+
+    
+print(halves_count(1324, 98))

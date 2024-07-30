@@ -1,0 +1,17 @@
+"""
+Write a function that takes a string as an argument and returns the left most integer in the string.
+"""
+
+
+def most_left_digit(phrase):
+    numbers = []
+    for i in phrase:
+        if i.isdigit():
+            numbers.append(i)
+    print(numbers[0])
+
+
+most_left_digit("TrAdE2W1n95!")
+most_left_digit("V3r1ta$")
+most_left_digit("U//DertHe1nflu3nC3")
+most_left_digit("J@v@5cR1PT")

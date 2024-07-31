@@ -1,0 +1,32 @@
+"""
+Return the smallest number of steps it takes to convert a string entirely into uppercase or entirely into lower case,
+whichever takes the fewest number of steps. A step consists of changing one character from lower to upper case, or vice versa.
+"""
+
+
+def upper_or_lower(phrase):
+    upper_count = 0
+    lower_count = 0
+
+    for i in phrase:
+        if i.isupper():
+            upper_count += 1
+        else:
+            lower_count += 1
+
+    if upper_count == 0:
+        print("0")
+    elif lower_count == 0:
+        print("0")
+    elif lower_count == upper_count:
+        print(upper_count)
+    elif upper_count > lower_count:
+        print(f"{phrase} converted to {phrase.upper()} in {lower_count} step(s)")
+    elif lower_count > upper_count:
+        print(f"{phrase} coverted to {phrase.lower()} in {upper_count} step(s)")
+
+
+upper_or_lower("abC")
+upper_or_lower("abCBA")
+upper_or_lower("aba")
+upper_or_lower("abaCCC")

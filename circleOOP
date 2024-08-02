@@ -1,0 +1,32 @@
+"""
+Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two getters getArea() (PI*r^2) and getPerimeter() (2*PI*r) which give both respective areas and perimeter (circumference).
+
+For help with this class, I have provided you with a Rectangle constructor which you can use as a base example.
+"""
+import math
+
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        return math.pi * (self.radius ** 2)
+
+    def get_perimeter(self):
+        return 2 * math.pi * self.radius
+
+
+circy = Circle(11)
+print(f"Area of a circle with radius value of {circy.radius} is: {circy.get_area()}")
+print(f"Perimeter of a circle with radius of {circy.radius} is: {circy.get_perimeter()}")
+print()
+
+circy = Circle(4.44)
+print(f"Area of a circle with radius value of {circy.radius} is: {circy.get_area()}")
+print(f"Perimeter of a circle with radius of {circy.radius} is: {circy.get_perimeter()}")
+
+
+
+
+

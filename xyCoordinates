@@ -1,0 +1,14 @@
+"""
+Create a function that converts two lists of x- and y- coordinates into a list of (x, y) coordinates.
+"""
+
+
+def xy(xCoordinates, yCoordinates):
+    coordinates = []
+
+    for i in range(len(xCoordinates)):
+        coordinates.append([xCoordinates[i], yCoordinates[i]])
+    return coordinates
+
+
+print(xy([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]))

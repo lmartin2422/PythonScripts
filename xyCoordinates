@@ -1,5 +1,6 @@
 """
 Create a function that converts two lists of x- and y- coordinates into a list of (x, y) coordinates.
+Very similar to challenges in coding interviews
 """
 
 

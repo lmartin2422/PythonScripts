@@ -1,4 +1,5 @@
 """ IP Address Locator"""
+use for Linkedin post
 
 # run command on terminal: pip install geocode
 # run command on terminal: pip install folium

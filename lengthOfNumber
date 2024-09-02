@@ -1,0 +1,18 @@
+"""
+Create a function that takes a number num and returns its length.
+"""
+
+
+def length_of_number(number):
+    conversion = str(number)
+
+    count = 0
+    for i in conversion:
+        count += 1
+    return f"Length of {number}: {count}"
+
+
+print(length_of_number(10))
+print(length_of_number(5000))
+print(length_of_number(0))
+print(length_of_number(100))

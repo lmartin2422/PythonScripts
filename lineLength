@@ -1,0 +1,21 @@
+"""
+https://edabit.com/challenge/3Ekam9jvbNKHDtx4K
+
+Write a function that takes coordinates of two points on a two-dimensional plane and
+returns the length of the line segment connecting those two points.
+"""
+import math
+
+
+def line_length(first_coord, second_coord):
+    x_difference = first_coord[0] - second_coord[0]
+    y_difference = first_coord[1] - second_coord[1]
+
+    length = math.sqrt((x_difference**2) + (y_difference**2))
+
+    return round(length, 2)
+
+
+print(line_length([15, 7], [22, 11]))
+print(line_length([0, 0], [0, 0]))
+print(line_length([0, 0], [1, 1]))

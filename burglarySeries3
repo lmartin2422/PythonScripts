@@ -1,0 +1,38 @@
+"""
+https://edabit.com/challenge/2wQPKcSipXmK4idwD
+
+Your spouse is not concerned with the loss of material possessions but rather with his/her favorite pet. Is it gone?!
+
+Given a dictionary of the stolen items and a string in lowercase representing the name of the pet (e.g. "rambo"), return:
+
+"Rambo is gone..." if the name is on the list.
+"Rambo is here!" if the name is not on the list.
+Note that the first letter of the name in the return statement is capitalized.
+"""
+
+
+def item_list(items):
+    name = "timmy"
+    if name in items:
+        return f"{name.capitalize()} is gone..."
+    else:
+        return f"{name.capitalize()} is here!"
+
+
+print(item_list({
+    "tv": 30,
+    "timmy": 20,
+    "stereo": 50, }))
+
+print(item_list({
+    "tv": 30,
+    "stereo": 50,
+}))
+
+print(item_list({}))
+
+
+
+
+
+

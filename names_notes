@@ -1,0 +1,17 @@
+"""
+https://edabit.com/challenge/5KqHNS9wS97zN7Xyy
+
+Create a function that takes a dictionary of objects like { "name": "John", "notes": [3, 5, 4] } and
+returns a dictionary of objects like { "name": "John", "top_note": 5 }.
+"""
+
+
+def names_top_notes(names_notes):
+    top_note = max(names_notes['notes'])
+
+    return {"name": names_notes["name"], "top note": top_note}
+
+
+print(names_top_notes({"name": "John", "notes": [3, 5, 4]}))
+print(names_top_notes({"name": "Max", "notes": [1, 4, 6]}))
+print(names_top_notes({"name": "Zygmund", "notes": [1, 2, 3]}))

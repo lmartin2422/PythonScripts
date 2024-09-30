@@ -1,0 +1,25 @@
+"""
+https://edabit.com/challenge/X6xZ2EaqqQbGF7Bwv
+
+Given an int, figure out how many ones, threes and nines you could fit into the number. You must create a class.
+You will make variables (self.ones, self.threes, self.nines) to do this.
+"""
+
+
+class OnesThreesNines():
+    """
+    Initialize the class with the number and calculate how many
+    ones, threes, and nines can fit into the number.
+    """
+    def __init__(self, number):
+        self.ones = number // 1
+        self.threes = number // 3
+        self.nines = number // 9
+
+
+n1 = OnesThreesNines(5)
+print(n1.nines)
+print(n1.ones)
+print(n1.threes)
+
+

@@ -1,0 +1,40 @@
+"""
+https://edabit.com/challenge/jpW2fAzfPtop8AYfW
+
+Write a function that transforms a list of characters into a list of dictionaries, where:
+
+The keys are the characters themselves.
+The values are the ASCII codes of those characters.
+Examples
+to_dict(["a", "b", "c"]) ➞ [{"a": 97}, {"b": 98}, {"c": 99}]
+
+to_dict(["^"]) ➞ [{"^": 94}]
+
+to_dict([]) ➞ []
+"""
+
+
+def to_dict(char_list):
+    """
+    Transform a list of characters into a list of dictionaries where
+    the keys are the characters and the values are their ASCII codes.
+
+    :param char_list: List of characters.
+    :ord(char): The built-in ord() function is used to get the ASCII code of a character.
+    :return: List of dictionaries with characters as keys and their ASCII codes as values.
+    """
+    result = []
+
+    # Loop through each character in the list
+    for char in char_list:
+        # Create a dictionary with the character and its ASCII code
+        char_dict = {char: ord(char)}
+        # Add the dictionary to the result list
+        result.append(char_dict)
+
+    return result
+
+
+print(to_dict(["a", "b", "c"]))
+print(to_dict(["^"]))
+print(to_dict([]))

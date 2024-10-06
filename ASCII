@@ -1,6 +1,8 @@
 """
 https://edabit.com/challenge/jpW2fAzfPtop8AYfW
 
+github update 1
+
 Write a function that transforms a list of characters into a list of dictionaries, where:
 
 The keys are the characters themselves.

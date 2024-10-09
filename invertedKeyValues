@@ -1,0 +1,18 @@
+"""
+https://edabit.com/challenge/Axim3Ld5zu9RFLZKr
+
+Write a function that inverts the keys and values of a dictionary.
+"""
+
+
+def invert(dictionary):
+    inverted_dict = {}
+
+    for key, value in dictionary.items():
+        inverted_dict[value] = key
+    return inverted_dict
+
+
+print(invert({"z": "q", "w": "f"}))
+print(invert({"a": 1, "b": 2, "c": 3}))
+print(invert({"zebra": "koala", "horse": "camel"}))

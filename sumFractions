@@ -1,0 +1,22 @@
+"""
+https://edabit.com/challenge/qaNmoG4dAXRL5JqvA
+
+Create a function that takes a list containing nested lists as an argument. Each sublist has 2 elements.
+The first element is the numerator and the second element is the denominator.
+Return the sum of the fractions rounded to the nearest whole number.
+
+"""
+
+
+def sum_fractions(lst):
+    total = 0
+    for fraction in lst:
+        numerator = fraction[0]
+        denominator = fraction[1]
+        total += numerator / denominator
+    return round(total)
+
+
+print(sum_fractions([[18, 13], [4, 5]]))
+print(sum_fractions([[36, 4], [22, 60]]))
+print(sum_fractions([[11, 2], [3, 4], [5, 4], [21, 11], [12, 6]]))

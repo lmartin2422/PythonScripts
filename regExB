@@ -1,0 +1,22 @@
+"""
+https://edabit.com/challenge/kzoTToex5vRyjdrid
+
+Write the regular expression that will match all non-digit characters of a string.
+Use the character class \D in your expression.
+
+"""
+
+
+import re
+
+txt = "242Edabit2345can3443be3254324addictive!"
+pattern = r"\D+"
+# \D matches any character that is not a digit (0-9).
+# + ensures that it matches one or more non-digit characters in a sequence.
+
+
+result = " ".join(re.findall(pattern, txt))
+# re.findall(pattern, txt) finds all sequences of non-digit characters.
+# " ".join() joins the list of non-digit sequences with spaces, forming the final sentence "Edabit can be addictive!"
+
+print(result)

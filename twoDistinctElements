@@ -1,0 +1,28 @@
+"""
+https://edabit.com/challenge/yL5WmWTCNwwb4GnR7
+
+In each input list, every number repeats at least once, except for two.
+Write a function that returns the two unique numbers.
+"""
+
+
+def return_unique(lst):
+    count = {}  # using a dictionary allows for key(number) value(count) pairs
+
+    for i in lst:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+
+    unique_numbers = []
+    for i in count:
+        if count[i] == 1:
+            unique_numbers.append(i)
+    return unique_numbers
+
+
+
+print(return_unique([1, 9, 8, 8, 7, 6, 1, 6]))
+print(return_unique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]))
+print(return_unique([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]))

@@ -1,0 +1,18 @@
+"""
+https://edabit.com/challenge/SfEretprfmbbcTChT
+
+Given an input string, reverse the string word by word.
+"""
+
+
+def reverse_words(phrase):
+    phrase_list = []
+    for i in phrase.split()[::-1]:
+        phrase_list.append(i)
+
+    return " ".join(phrase_list)
+
+
+print(reverse_words("the sky is blue"))
+print(reverse_words("   hello world!   "))
+print(reverse_words("a good   example"))

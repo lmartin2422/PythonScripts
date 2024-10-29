@@ -1,0 +1,21 @@
+"""
+https://edabit.com/challenge/6dnhESWBcTMMF3gsa
+
+Create a function that takes two parameters and, if both parameters are strings,
+add them as if they were integers or if the two parameters are integers, concatenate them.
+
+"""
+
+
+def stupid_addition(x1, x2):
+    if isinstance(x1, str) and isinstance(x2, str):
+        return int(x1) + int(x2)
+    elif isinstance(x1, int) and isinstance(x2, int):
+        return str(x1) + str(x2)
+    else:
+        return None
+
+
+print(stupid_addition(1, 2))
+print(stupid_addition("1", "2"))
+print(stupid_addition("1", 2))

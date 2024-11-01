@@ -1,0 +1,44 @@
+"""
+https://edabit.com/challenge/n5Ar5F2CJMpGRXz3o
+
+Stalactites hang from the ceiling of a cave while stalagmites grow from the floor.
+
+Create a function that determines whether the input represents "stalactites" or "stalagmites".
+If it represents both, return "both".
+Input will be a 2D list, with 1 representing a piece of rock, and 0 representing air space.
+
+NOTES
+In other words, if the first list has 1s, return "stalactites".
+If the last list has 1s, return "stalagmites".
+If both have them, return "both".
+"""
+
+
+def mineral_formation(lst):
+    if 1 in lst[0]:
+        if 1 in lst[-1]:
+            return "both"
+        else:
+            return "stalactites"
+    else:
+        return "stalagmites"
+
+
+print(mineral_formation([
+  [0, 1, 0, 1],
+  [0, 1, 0, 1],
+  [0, 0, 0, 1],
+  [0, 0, 0, 0]
+]))
+print(mineral_formation([
+  [0, 0, 0, 0],
+  [0, 1, 0, 1],
+  [0, 1, 1, 1],
+  [0, 1, 1, 1]
+]))
+print(mineral_formation([
+  [1, 0, 1, 0],
+  [1, 1, 0, 1],
+  [0, 1, 1, 1],
+  [0, 1, 1, 1]
+]))

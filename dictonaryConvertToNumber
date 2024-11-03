@@ -1,0 +1,20 @@
+"""
+https://edabit.com/challenge/R7d5JE7NQCSnajuni
+
+You prepare a list to send to the insurance company. As you finish, you notice you misformatted it.
+Given a dictionary with at least one key/value pair, convert all the values to numbers.
+"""
+
+
+def convert_to_number(items):
+    new_dict = {}
+
+    for key, value in items.items():
+        new_dict[key] = int(value)  # stores the new int value to its respective key
+
+    return new_dict
+
+
+print(convert_to_number({"piano": "200"}))
+print(convert_to_number({"piano": "200", "tv": "300"}))
+print(convert_to_number({"piano": "200", "tv": "300", "stereo": "400"}))

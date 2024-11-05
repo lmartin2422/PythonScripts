@@ -1,0 +1,28 @@
+"""
+https://edabit.com/challenge/LdXYzf5d3xJgYZur8
+
+Create a function that takes three values:
+
+h hours
+m minutes
+s seconds
+Return the value that's the longest duration.
+"""
+
+
+def longest_time(h, m, s):
+    minutes_to_seconds = 60 * m
+    hours_to_seconds = 60 * 60 * h
+
+    if hours_to_seconds > minutes_to_seconds:
+        if hours_to_seconds > s:
+            return h
+    elif minutes_to_seconds > s:
+        return m
+    else:
+        return s
+
+
+print(longest_time(1, 59, 3598))
+print(longest_time(2, 300, 15000))
+print(longest_time(15, 955, 59400))

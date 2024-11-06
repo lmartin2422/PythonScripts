@@ -1,0 +1,23 @@
+"""
+https://edabit.com/challenge/7PtLRCT5aL9uiqxPs
+
+Your job is to create a function, that takes 3 numbers: a, b, c and...
+returns True if the last digit of a * b = the last digit of c.
+Check the examples below for an explanation.
+"""
+
+
+def last_dig(a, b, c):
+
+    last_digit_a = a % 10
+    last_digit_b = b % 10
+    last_digit_c = c % 10
+
+    product_last_digit_a_b = last_digit_a * last_digit_b
+
+    return product_last_digit_a_b == last_digit_c
+
+
+print(last_dig(25, 21, 125))
+print(last_dig(55, 226, 5190))
+print(last_dig(12, 215, 2142))

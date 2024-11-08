@@ -1,0 +1,30 @@
+"""
+https://edabit.com/challenge/2NPjN7DDvyi6f5CHF
+
+Create a function that takes two arguments: a father's current age f_age and his son's current age s_age.
+Сalculate how many years ago the father was twice as old as his son, or in how many years he will be twice as old.
+"""
+
+
+def when_age_is_double(f_age, s_age):
+    age_gap = f_age - s_age  # 29
+    double_age = age_gap * 2  # 58
+    result = age_gap - s_age  # 22
+
+    if result > 1:
+        return f"In {result} years, the son will be half his father's age.\n" \
+               f"The son will be {age_gap} and the father will be {double_age}." \
+               f"\nThe son is currently {s_age} and the father is {f_age}."
+    elif result < 0:
+        positive_number = - result
+        return f"The son was half his father's age {positive_number} years ago when he was {s_age - positive_number}.\n" \
+               f"The son is currently {s_age} and the father is {f_age}."
+    else:
+        return f"The son is currently half his father's age.\nThe son is {s_age} and his father is {f_age}."
+
+
+print(when_age_is_double(36, 7))
+print()
+print(when_age_is_double(55, 30))
+print()
+print(when_age_is_double(42, 21))

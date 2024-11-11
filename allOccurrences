@@ -1,0 +1,19 @@
+"""
+https://edabit.com/challenge/jwzgYjymYK7Gmro93
+
+Create a function that returns the indices of all occurrences of an item in the list.
+"""
+
+
+def get_indices(lst, target):
+    index_locations = []  # stores the location of the target
+    for i in range(len(lst)):
+        if lst[i] == target:
+            index_locations.append(i)
+    return index_locations
+
+
+print(get_indices(["a", "a", "b", "a", "b", "a"], "a"))
+print(get_indices([1, 5, 5, 2, 7], 7))
+print(get_indices([1, 5, 5, 2, 7], 5))
+print(get_indices([1, 5, 5, 2, 7], 8))

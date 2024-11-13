@@ -13,22 +13,13 @@ GUEST_LIST = {
 }
 
 
-def international_greetings(pairing):
-
-        if pairing in GUEST_LIST:
-            country = GUEST_LIST[pairing]
-            return f"Hi! I'm {pairing}, and I'm from {country}."
-        else:
-            return f"Hi! I'm a guest."
-
-
-
-
-
-
-
-
-    # return f"Hi! I'm {}, and I'm from {}."
+def international_greetings(name):
+    
+    if name in GUEST_LIST:
+        country = GUEST_LIST[name]
+        return f"Hi! I'm {name}, and I'm from {country}."
+    else:
+        return f"Hi! I'm a guest."
 
 
 print(international_greetings("Randy"))

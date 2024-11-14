@@ -25,3 +25,59 @@ def international_greetings(name):
 print(international_greetings("Randy"))
 print(international_greetings("Sam"))
 print(international_greetings("Monti"))
+
+
+
+____
+
+experiments
+
+"""
+https://edabit.com/challenge/vAS4Hp4wzSEnQs3tZ
+
+Suppose you have a guest list of students and the country they are from, stored as key-value pairs in a dictionary.
+"""
+
+GUEST_LIST = {
+    "Randy": "Germany",
+    "Karla": "France",
+    "Wendy": "Japan",
+    "Norman": "England",
+    "Sam": "Argentina"
+}
+
+print(GUEST_LIST.get("Randy"))
+
+if GUEST_LIST.get("sON"):
+    print("That capital exist")
+else:
+    print("noNE")
+
+GUEST_LIST.update({"Leo": "Africa"})
+print(GUEST_LIST)
+
+guests = GUEST_LIST.keys()  # assigns an object to the key values
+
+for guest in GUEST_LIST.keys():  # prints all the keys
+    print(guest)
+
+# for key, value in GUEST_LIST.items():
+#     if key == "Randy":
+#         print(f"{key}:{value}")
+
+
+def international_greetings(name):
+
+    if name in GUEST_LIST:
+        country = GUEST_LIST[name]
+        return f"Hi! I'm {name}, and I'm from {country}."
+    else:
+        return f"Hi! I'm a guest."
+
+
+
+#
+# print(international_greetings("Randy"))
+# print(international_greetings("Sam"))
+# print(international_greetings("Monti"))
+

@@ -1,0 +1,18 @@
+"""
+https://edabit.com/challenge/K5277r6RmsJRSz27t
+
+The challenge is to recreate the functionality of the title() method into a function called emphasise().
+The title() method capitalises the first letter of every word and lowercases all of the other letters in the word.
+"""
+
+
+def emphasize(phrase):
+    word_list = []
+    for word in phrase.split():
+        word_list.append(word.capitalize())
+    return " ".join(word_list)
+
+
+print(emphasize("hello world"))
+print(emphasize("GOOD MORNING"))
+print(emphasize("99 red balloons!"))

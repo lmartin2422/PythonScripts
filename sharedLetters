@@ -1,0 +1,21 @@
+"""
+https://edabit.com/challenge/wvuk7d2mWgZEmFFYD
+
+Create a function that returns the number of characters shared between two words.
+"""
+
+
+def shared_letters(word1, word2):
+
+    matching_letters = []
+
+    for i in word1:
+        if i in word2:
+            matching_letters.append(i)
+    return len(matching_letters)
+
+
+print(shared_letters("apple", "meaty"))
+print(shared_letters("fan", "forsook"))
+print(shared_letters("spout", "shout"))
+

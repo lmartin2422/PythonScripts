@@ -1,0 +1,51 @@
+"""
+https://edabit.com/challenge/oiHH7qocTyM3JqNf8
+
+Write a function that changes every letter to the next letter:
+
+"a" becomes "b"
+"b" becomes "c"
+"d" becomes "e"
+and so on ...
+
+"""
+
+
+def move(word):
+
+    shifted_text = ""
+    for char in word:
+        if char.isalpha():
+            if char == 'z':
+                shifted_text += 'a'
+            elif char == 'Z':
+                shifted_text += 'A'
+            else:
+                shifted_text += chr(ord(char) + 1)
+        else:
+            shifted_text += char
+
+    return shifted_text
+
+
+print(move("hello"))
+print(move("bye"))
+print(move("welcome"))
+
+
+"""
+Explanation:
+ord() and chr():
+
+ord(char) gives the Unicode code of a character.
+chr(code) converts a Unicode code back to a character.
+By adding 1 to the Unicode code of a character, you move to the next letter.
+Handling "z" and "Z":
+
+Special cases are added to wrap around 'z' to 'a' and 'Z' to 'A'.
+Keeping Non-Alphabet Characters Unchanged:
+
+If the character isn’t a letter (like spaces or punctuation), it’s added directly to the result.
+This function works for both uppercase and lowercase letters, and it leaves other characters unchanged.
+
+"""

@@ -1,0 +1,21 @@
+"""
+https://edabit.com/challenge/x44ZRvQtJ6TyZQhwx
+
+A pandigital number contains all digits (0-9) at least once.
+Write a function that takes an integer, returning True if the integer is pandigital, and False otherwise.
+"""
+
+
+def is_pandigital(number):
+    new_number = str(number)
+    requirement = "0123456789"
+
+    for i in requirement:
+        if i not in new_number:
+            return False
+    return True
+
+
+print(is_pandigital(98140723568910))
+print(is_pandigital(90864523148909))
+print(is_pandigital(112233445566778899))

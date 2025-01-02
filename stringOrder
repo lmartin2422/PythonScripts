@@ -1,0 +1,25 @@
+"""
+https://edabit.com/challenge/EFwDXErjDywXp56WG
+
+Create a function that takes a string and returns True or False,
+depending on whether the characters are in order or not.
+"""
+
+
+def is_in_order(phrase):
+    ordered_phrase = []
+    new = sorted(phrase)
+
+    for i in phrase:
+        ordered_phrase.append(i)
+
+    if ordered_phrase == new:
+        return True
+    else:
+        return False
+
+
+print(is_in_order("abc"))
+print(is_in_order("edabit"))
+print(is_in_order("123"))
+print(is_in_order("xyzz"))

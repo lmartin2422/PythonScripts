@@ -1,0 +1,26 @@
+"""
+https://edabit.com/challenge/7RPtGySfZLkEHB8ac
+
+It takes 21 seconds to wash your hands and help prevent the spread of COVID-19.
+
+Create a function that takes the number of times a person washes their hands per day N and...
+ the number of months they follow this routine nM and...
+  calculates the duration in minutes and seconds that person spends washing their hands.
+"""
+
+
+def wash_hands(N, nM):
+    ideal_wash_seconds = 21
+    days_in_a_month = 30
+    total_days_by_number_of_months = nM * days_in_a_month
+    total_time_of_seconds_per_day = ideal_wash_seconds * N
+    total_seconds_cummulative = total_time_of_seconds_per_day * total_days_by_number_of_months
+    total_minutes_cummulative = total_seconds_cummulative / 60
+    remaining_seconds = total_seconds_cummulative % 60
+
+    return f"{total_minutes_cummulative} minutes and {remaining_seconds} seconds"
+
+
+print(wash_hands(8, 7))
+print(wash_hands(0, 0))
+print(wash_hands(7, 9))

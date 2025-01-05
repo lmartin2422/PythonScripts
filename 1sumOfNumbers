@@ -1,0 +1,15 @@
+"""
+https://edabit.com/challenge/rZToTkR5eB9Zn4zLh
+
+Create a function that takes two numbers as arguments and returns their sum.
+"""
+
+
+def addition(n1, n2):
+    result = n1 + n2
+    return result
+
+
+print(addition(3, 2))
+print(addition(-3, -6))
+print(addition(7, 3))

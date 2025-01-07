@@ -17,3 +17,19 @@ def word_builder(letters, order):
 print(word_builder(["g", "e", "o"], [1, 0, 2]))
 print(word_builder(["e", "t", "s", "t"], [3, 0, 2, 1]))
 print(word_builder(["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]))
+
+
+"""
+Alternate way
+"""
+
+def word_builder(list1, list2):
+    new_word = []
+    for i in list2:
+        new_word.append(list1[i])
+    return "".join(new_word)
+
+
+print(word_builder(["g", "e", "o"], [1, 0, 2]))
+print(word_builder(["e", "t", "s", "t"], [3, 0, 2, 1]))
+print(word_builder(["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]))

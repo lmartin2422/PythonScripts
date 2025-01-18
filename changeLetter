@@ -1,0 +1,34 @@
+"""
+https://edabit.com/challenge/oiHH7qocTyM3JqNf8
+
+Write a function that changes every letter to the next letter:
+
+"a" becomes "b"
+"b" becomes "c"
+"d" becomes "e"
+and so on ...
+
+"""
+
+
+def move(word):
+    new_word = []
+
+    for i in word:
+        if i.isalpha():
+            new_word.append(chr(ord(i) + 1))
+        else:
+            new_word.append(i)
+        
+    return "".join(new_word)
+
+
+print(move("hello"))
+print(move("bye"))
+print(move("welcome"))
+
+
+"""
+If it’s a letter, we use ord(char) + 1 to shift it to the next letter, 
+then convert it back to a character using chr().
+"""

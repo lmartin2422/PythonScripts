@@ -1,0 +1,29 @@
+"""
+https://edabit.com/challenge/GiXejjZrExmeAPtp7
+
+Create a function (named fifth) that takes some arguments and returns the type of the fifth argument.
+In case the arguments were less than 5, return "Not enough arguments".
+"""
+
+
+def fifth(*args):
+    if len(args) < 5:
+        return "Not enough arguments"
+    return type(args[4])
+
+
+print(fifth(1, 2, 3, 4, 5))
+print(fifth("a", 2, 3, [1, 2, 3], "five"))
+print(fifth())
+
+
+"""
+Explanation:
+1. Variable arguments: Use *args to accept any number of arguments.
+2. Check length: Use len(args) to see if there are at least 5 arguments.
+3. Access the fifth argument: If there are 5 or more arguments, 
+   access the fifth one using args[4] (since indexing starts from 0).
+4. Return the type: Use the type() function to return the type of the fifth argument.
+5. Less than 5 arguments: If there are fewer than 5 arguments, return "Not enough arguments".
+
+"""

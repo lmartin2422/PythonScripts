@@ -1,0 +1,30 @@
+"""
+https://edabit.com/challenge/zgu7m6W7i3z5SYwa6
+
+Write a function that takes a list of two numbers and...
+ determines if the sum of the digits in each number are equal to each other.
+"""
+
+
+def is_equal(n1):
+
+    num1 = n1[0]
+    num2 = n1[1]
+
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+
+    sum1 = 0
+    for digit in str_num1:
+        sum1 += int(digit)
+
+    sum2 = 0
+    for digit in str_num2:
+        sum2 += int(digit)
+
+    return sum1 == sum2
+
+
+print(is_equal([105, 42]))
+print(is_equal([21, 35]))
+print(is_equal([0, 0]))

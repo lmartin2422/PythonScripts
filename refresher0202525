@@ -1,0 +1,19 @@
+"""
+https://edabit.com/challenge/gwqqc5p3oiFXRJAQm
+"""
+
+
+def football_points(w, d, l):
+    wins = 3
+    draws = 1
+    losses = 0
+
+    total_win_points = wins * w
+    total_draw_points = draws * d
+
+    return total_win_points + total_draw_points
+
+
+print(football_points(3, 4, 2))
+print(football_points(5, 0, 2))
+print(football_points(0, 0, 1))

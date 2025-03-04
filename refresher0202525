@@ -17,3 +17,37 @@ def football_points(w, d, l):
 print(football_points(3, 4, 2))
 print(football_points(5, 0, 2))
 print(football_points(0, 0, 1))
+print()
+
+
+"""
+https://edabit.com/challenge/coRuMC4Ykksti8Z47
+"""
+
+
+def hello_name(name):
+
+    return "Hello " + str(name) + "!"
+
+
+print(hello_name("Gerald"))
+print(hello_name("Tiffany"))
+print(hello_name("Ed"))
+print(hello_name(10))
+print()
+
+
+"""
+https://edabit.com/challenge/D2Hvq6NZchp7Q6ftR
+"""
+
+
+def mod(n1, n2):
+    r = n1 % n2
+    return r
+
+
+print(mod(-13, 64))
+print(mod(50, 25))
+print(mod(-6, 3))
+

@@ -51,3 +51,23 @@ print(mod(-13, 64))
 print(mod(50, 25))
 print(mod(-6, 3))
 
+
+
+def maximum_score(score):
+
+    total = 0
+    for i in score:
+        total += i["score"]
+    return total
+
+
+print(maximum_score([
+  {"tile": "N", "score": 1},
+  {"tile": "K", "score": 5},
+  {"tile": "Z", "score": 10},
+  {"tile": "X", "score": 8},
+  {"tile": "D", "score": 2},
+  {"tile": "A", "score": 1},
+  {"tile": "E", "score": 1}]))
+
+

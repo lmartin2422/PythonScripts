@@ -71,3 +71,24 @@ print(maximum_score([
   {"tile": "E", "score": 1}]))
 
 
+"""
+https://edabit.com/challenge/EFwDXErjDywXp56WG
+"""
+
+
+def is_in_order(phrase):
+
+    ordered = "".join(sorted(phrase))
+    if ordered == phrase:
+        return True
+    else:
+        return False
+
+
+print(is_in_order("abc"))
+print(is_in_order("edabit"))
+print(is_in_order("123"))
+print(is_in_order("xyzz"))
+
+
+

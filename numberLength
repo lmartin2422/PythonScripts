@@ -1,0 +1,17 @@
+"""
+https://edabit.com/challenge/2zKetgAJp4WRFXiDT
+Create a function that takes a number num and returns its length.
+"""
+
+
+def number_length(number):
+    length = str(number)
+    count = 0
+    for i in length:
+        count += 1
+    return count
+
+
+print(number_length(10))
+print(number_length(5000))
+print(number_length(0))
